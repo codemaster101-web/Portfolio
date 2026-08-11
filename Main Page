@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Mechanical Engineering</title>
+<style>
+
+  
+  :root{
+    --paper: #F6F1E7;
+    --paper-line: #E1D9C6;
+    --ink: #24221E;
+    --ink-soft: #6B6558;
+    --blueprint: #2F4F6B;
+    --blueprint-soft: #6C87A0;
+    --serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --max: 700px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  ::selection{background:var(--blueprint); color:var(--paper);}
+
+  a{color:var(--blueprint); text-decoration:none; border-bottom:1px solid var(--blueprint-soft);}
+  a:hover{border-bottom-color:var(--blueprint);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--blueprint); outline-offset:3px;}
+
+  .wrap{max-width:var(--max); margin:0 auto; padding:64px 24px 96px;}
+
+    nav{
+    display:flex; gap:22px; margin-bottom:56px;
+    font-family:var(--mono); font-size:13px; letter-spacing:0.02em;
+  }
+  nav a{border-bottom:none; color:var(--ink-soft);}
+  nav a:hover{color:var(--blueprint);}
+
+    header{margin-bottom:64px;}
+  h1{
+    font-size:32px; margin:0 0 6px; font-weight:400; letter-spacing:-0.01em;
+  }
+  .tagline{
+    color:var(--ink-soft); font-size:16px; margin:0;
+  }
+  .title-rule{
+    display:flex; align-items:center; gap:10px;
+    margin-top:18px; font-family:var(--mono); font-size:11px;
+    color:var(--ink-soft); letter-spacing:0.06em; text-transform:uppercase;
+  }
+  .title-rule::after{content:''; flex:1; height:1px; background:var(--paper-line);}
+
+    section{margin-bottom:64px;}
+  h2{
+    font-family:var(--mono); font-size:12px; text-transform:uppercase;
+    letter-spacing:0.12em; color:var(--blueprint); font-weight:600;
+    margin:0 0 24px; padding-bottom:10px; border-bottom:1px solid var(--paper-line);
+  }
+
+    .about p{margin:0 0 14px; max-width:58ch;}
+  .about p:last-child{margin-bottom:0;}
+
+    .role{margin-bottom:32px;}
+  .role:last-child{margin-bottom:0;}
+  .role-head{
+    display:flex; justify-content:space-between; align-items:baseline;
+    gap:16px; flex-wrap:wrap;
+  }
+  .role-title{font-weight:600; font-size:17px;}
+  .role-meta{
+    font-family:var(--mono); font-size:12px; color:var(--ink-soft);
+    white-space:nowrap;
+  }
+  .role ul{margin:8px 0 0; padding-left:18px;}
+  .role li{margin-bottom:5px; color:var(--ink); font-size:16px;}
+  .role li::marker{color:var(--blueprint-soft);}
+
+    .project{
+    border-top:1px solid var(--paper-line);
+    padding:22px 0;
+  }
+  .project:last-child{border-bottom:1px solid var(--paper-line);}
+  .project-head{
+    display:flex; justify-content:space-between; align-items:baseline;
+    gap:16px; flex-wrap:wrap; margin-bottom:8px;
+  }
+  .project-title{font-weight:600; font-size:18px;}
+  .project-spec{
+    font-family:var(--mono); font-size:11.5px; color:var(--blueprint);
+    letter-spacing:0.02em; white-space:nowrap;
+  }
+  .project-desc{margin:0 0 8px; max-width:60ch; color:var(--ink);}
+  .project-link{font-family:var(--mono); font-size:12.5px;}
+  .project-figure{margin:14px 0; max-width:420px;}
+  .project-figure img{width:100%; display:block; border:1px solid var(--paper-line);}
+  .project-figure figcaption{
+    font-family:var(--mono); font-size:10.5px; color:var(--ink-soft);
+    margin-top:6px; letter-spacing:0.02em;
+  }
+  .figure-row{display:flex; gap:16px; margin:14px 0; flex-wrap:wrap;}
+  .figure-row .project-figure{margin:0; flex:1 1 220px;}
+
+    .contact-list{display:flex; flex-direction:column; gap:8px;}
+  .contact-list a{font-size:16px;}
+
+  footer{
+    margin-top:80px; padding-top:24px; border-top:1px solid var(--paper-line);
+    font-family:var(--mono); font-size:11px; color:var(--ink-soft);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
+  }
+
+  @media (max-width:520px){
+    .wrap{padding:40px 18px 72px;}
+    h1{font-size:26px;}
+    .role-head, .project-head{flex-direction:column; align-items:flex-start; gap:2px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <nav>
+    <a href="#about">about</a>
+    <a href="#experience">experience</a>
+    <a href="#projects">projects</a>
+    <a href="#contact">contact</a>
+  </nav>
+
+  <header>
+        <h1>Your Name</h1>
+        <p class="tagline">Mechanical engineering student at UC Riverside — assistive devices, propulsion, and product design.</p>
+    <div class="title-rule">rev. 2026</div>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>I'm drawn to projects where a design has to earn its keep under real constraints — a signal that has to arrive fast enough, a structure that has to hold under load, a part that has to actually get manufactured. That's kept me moving between fairly different corners of mechanical engineering: assistive tech, propulsion, and hands-on product design.</p>
+    <p>I'm finishing a BS in Mechanical Engineering at UC Riverside (June 2026), CSWA certified in SolidWorks, and spend most of my project time in CAD, FEA, and increasingly in Python for signal processing on the assistive-device side.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="role">
+      <div class="role-head">
+        <span class="role-title">BS, Mechanical Engineering</span>
+        <span class="role-meta">UC Riverside · June 2026</span>
+      </div>
+      <ul>
+        <li>Supported by a Federal Grant, Middle Class Scholarship, and UCR Grant.</li>
+        <li>Graduated valedictorian of a 250-student class at Tesoro High School before starting the program.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head">
+        <span class="role-title">Manufacturing Intern</span>
+        <span class="role-meta">beyondGreen Biotech Inc. · Summer 2020</span>
+      </div>
+      <ul>
+        <li>Ran four production machines with a 7-person team to turn coffee waste and other cellulose sources into biodegradable plastic hardware, from melting through molding and setting.</li>
+        <li>Vetted and corresponded with 17 potential coffee-waste suppliers, and rebuilt the company site to add an e-catalog and online ordering.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <div class="project-head">
+        <span class="project-title">BCI-Controlled Wheelchair</span>
+        <span class="project-spec">FUSION 360 · SOLIDWORKS · PYTHON · MINDAFFECTBCI</span>
+      </div>
+      <p class="project-desc">A non-invasive, EEG-controlled wheelchair meant to give users with advanced neuromuscular disorders or limb loss an alternative to joystick or sip-and-puff controls. I helped build a cVEP stimulus-and-decoding pipeline that turns raw focus on a flickering visual matrix into one of five steering commands, and co-designed the actuator mount that translates those commands into ±2% steering precision. The decoding pipeline hit 98% classification accuracy at 0.95s end-to-end latency, against a 2s target.</p>
+      <figure class="project-figure">
+        <img src="assets/bci-mount.png" alt="Rack-and-pinion steering mount, mounted to the wheelchair joystick housing and wired into the OpenBCI signal chain">
+        <figcaption>fig. — rack-and-pinion steering mount, wired into the joystick housing</figcaption>
+      </figure>
+      <a class="project-link" href="assets/bci-poster.png">full project poster (PDF/image) →</a>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <span class="project-title">Project Poseidon — Bipropellant Rocket</span>
+        <span class="project-spec">ANSYS · FUSION 360 · OPENROCKET · CFD</span>
+      </div>
+      <p class="project-desc">A seed-dispersal rocket built with UCR's Highlander Space Program: 120 in long, 7 in diameter, 87.6 lb fully loaded. I worked on the aero and structural side — running CFD to refine fin and airframe geometry, and hand-calculating material limits with Young's modulus to land on a composite airframe with a factor of safety of 3 on the nose cone. Final sim numbers: a 2.79-caliber stability margin, 35,930 ft predicted apogee, and Mach 1.51 max velocity.</p>
+      <a class="project-link" href="#">PLACEHOLDER: link →</a>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <span class="project-title">Straw-Bridge Competition</span>
+        <span class="project-spec">SOLIDWORKS FEA</span>
+      </div>
+      <p class="project-desc">Designed a bridge out of straws — 6 in long, 1 in wide — rated to hold a 10.5 kg point load. Got there by running repeated FEA stress tests against physical prototypes, adjusting the design each round. Took first place out of 15 competing teams.</p>
+      <div class="figure-row">
+        <figure class="project-figure">
+          <img src="assets/bridge-load-test.png" alt="Straw bridge under load test, digital scale reading 10.47 kg">
+          <figcaption>fig. — final load test, 10.47 kg held against a 10.5 kg target</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="assets/bridge-fea.png" alt="SolidWorks FEA axial stress plot of the straw bridge truss">
+          <figcaption>fig. — FEA axial stress distribution across the truss</figcaption>
+        </figure>
+      </div>
+      <a class="project-link" href="#">PLACEHOLDER: link →</a>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <span class="project-title">Rooftop Solar Panel Vacuum</span>
+        <span class="project-spec">SOLIDWORKS · FEA · PUGH MATRIX</span>
+      </div>
+      <p class="project-desc">A concept for a rooftop solar-panel cleaning vacuum that an average homeowner could disassemble and reassemble themselves. Our team generated concepts with the 6-3-5 brainwriting method, narrowed to three finalists, and I took the simplest-to-manufacture option through detailed design — FEA-driven material and dimension changes, then a write-up with a Pugh matrix and exploded assembly view for both technical and non-technical readers.</p>
+      <figure class="project-figure">
+        <img src="assets/vacuum-cad.png" alt="SolidWorks CAD render of the extendable rooftop solar panel cleaning tool, brush head and telescoping pole">
+        <figcaption>fig. — final CAD, telescoping pole with brush-head assembly</figcaption>
+      </figure>
+      <a class="project-link" href="#">PLACEHOLDER: link →</a>
+    </div>
+
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-list">
+            <a href="mailto:you@example.com">email</a>
+      <a href="https://github.com/yourname">github</a>
+      <a href="https://linkedin.com/in/yourname">linkedin</a>
+      <a href="#">resume (pdf)</a>
+    </div>
+    <p style="margin-top:20px; font-family:var(--mono); font-size:12px; color:var(--ink-soft);">CAD/Sim: SolidWorks (CSWA) · ANSYS · Fusion 360 · OpenRocket — Code: MATLAB · Python</p>
+  </section>
+
+  <footer>
+    <span>PLACEHOLDER — Your Name</span>
+    <span>built with plain HTML &amp; CSS</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
